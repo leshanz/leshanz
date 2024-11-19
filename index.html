@@ -5,26 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to load the header and footer
+        async function loadComponent(id, file) {
+            const element = document.getElementById(id);
+            if (element) {
+                const response = await fetch(file);
+                if (response.ok) {
+                    element.innerHTML = await response.text();
+                } else {
+                    console.error(`Failed to load ${file}`);
+                }
+            }
+        }
+        window.onload = () => {
+            loadComponent("header-placeholder", "header.html");
+            loadComponent("footer-placeholder", "footer.html");
+        };
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Your professional tagline (e.g., Developer | Researcher | Designer)</p>
-    </header>
-    <nav>
-        <a href="index.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div id="header-placeholder"></div> <!-- Header will be inserted here -->
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Brief introduction about yourself, your background, and professional interests.</p>
+            <p>I am a PhD candidate in the <a href="https://physics-astronomy.jhu.edu/">Department of Physics & Astronomy</a> 
+                at the <a href="https://jhu.edu/">Johns Hopkins University</a>.</p>
+            <p>
+                My reseach area is experimental condensed matter. My particular focus is to better understand strongly 
+                correlated systems and quantum magnetism using neutron scattering as a tool.<br>
+                I work with <a href="https://physics-astronomy.jhu.edu/directory/collin-l-broholm/">Dr.Collin Broholm</a>,
+                affiliated under <a href="https://iqm.jhu.edu/">Institue for Quantum Matter</a>.
+            </p>
         </section>
     </div>
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
+    <div id="footer-placeholder"></div> <!-- Footer will be inserted here -->
 </body>
 </html>

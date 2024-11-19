@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to load the header and footer
+        async function loadComponent(id, file) {
+            const element = document.getElementById(id);
+            if (element) {
+                const response = await fetch(file);
+                if (response.ok) {
+                    element.innerHTML = await response.text();
+                } else {
+                    console.error(`Failed to load ${file}`);
+                }
+            }
+        }
+        window.onload = () => {
+            loadComponent("header-placeholder", "header.html");
+            loadComponent("footer-placeholder", "footer.html");
+        };
+        
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div> <!-- Header will be inserted here -->
+
+    <div class="container">
+        <p>
+            The most up-to-date list of my publications can be found on my <a href="https://scholar.google.com/citations?user=IcP_P_sAAAAJ&hl=en">Google Scholar profile</a>.
+        </p>
+    </div>
+
+    <div id="publications-container">
+        <!-- Publications will be dynamically loaded here -->
+    </div>
+
+    <div id="footer-placeholder"></div> <!-- Footer will be inserted here -->
+
+    <script>
+        async function loadPublications() {
+        const container = document.getElementById("publications-container");
+        try {
+            const response = await fetch("publications.json");
+            if (!response.ok) throw new Error("Failed to load publications");
+
+            const data = await response.json();
+            const { journal_papers, conference_papers } = data;
+
+            // Create a section for Journal Papers
+            const journalSection = document.createElement("div");
+            journalSection.innerHTML = "<h2>Journal Papers</h2>";
+            journal_papers.forEach(pub => {
+                const pubDiv = document.createElement("div");
+                pubDiv.className = "publication";
+                pubDiv.innerHTML = `
+                    <div class="publication-title">
+                        <a href="${pub.link}" target="_blank">${pub.title}</a>
+                    </div>
+                    <div class="publication-authors">${pub.authors}</div>
+                    <div class="publication-journal">${pub.venue} (${pub.year})</div>
+                `;
+                journalSection.appendChild(pubDiv);
+            });
+
+            // Create a section for Conference Papers
+            const conferenceSection = document.createElement("div");
+            conferenceSection.innerHTML = "<h2>Conference Papers</h2>";
+            conference_papers.forEach(pub => {
+                const pubDiv = document.createElement("div");
+                pubDiv.className = "publication";
+                pubDiv.innerHTML = `
+                    <div class="publication-title">
+                        <a href="${pub.link}" target="_blank">${pub.title}</a>
+                    </div>
+                    <div class="publication-authors">${pub.authors}</div>
+                    <div class="publication-journal">${pub.venue} (${pub.year})</div>
+                `;
+                conferenceSection.appendChild(pubDiv);
+            });
+
+            container.appendChild(journalSection);
+            container.appendChild(conferenceSection);
+        } catch (error) {
+            console.error(error);
+            container.innerHTML = "<p>Failed to load publications.</p>";
+        }
+    }
+    loadPublications();
+    </script>
+
+</body>
+</html>

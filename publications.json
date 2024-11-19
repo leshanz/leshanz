@@ -1,0 +1,62 @@
+{
+    "journal_papers": [
+        {
+            "title": "Measuring the polarization reconstruction resolution of the ARIANNA neutrino detector with cosmic rays",
+            "authors": "Leshan Zhao,  P Baldi , et al.",
+            "year": 2022,
+            "venue": "Journal of Cosmology and Astroparticle Physics",
+            "link": "https://iopscience.iop.org/article/10.1088/1475-7516/2022/04/022/meta"
+        },
+        {
+            "title": "Improving sensitivity of the ARIANNA detector by rejecting thermal noise with deep learning",
+            "authors": "Leshan Zhao,  P Baldi , et al.",
+            "year": 2022,
+            "venue": "Journal of Instrumentation",
+            "link": "https://iopscience.iop.org/article/10.1088/1748-0221/17/03/P03007/meta"
+        },
+        {
+            "title": "TAROGE-M: radio antenna array on antarctic high mountain for detecting near-horizontal ultra-high energy air showers",
+            "authors": "Leshan Zhao,  Jiwoo Nam , et al.",
+            "year": 2022,
+            "venue": "Journal of Cosmology and Astroparticle Physics",
+            "link": "https://iopscience.iop.org/article/10.1088/1475-7516/2022/11/022/meta"
+        },
+        {
+            "title": "Triboelectric backgrounds to radio-based polar ultra-high energy neutrino (UHEN) experiments",
+            "authors": "Leshan Zhao,  A Anker , et al.",
+            "year": 2023,
+            "venue": "Astroparticle physics",
+            "link": "https://www.sciencedirect.com/science/article/pii/S0927650522000913"
+        },
+        {
+            "title": "TAROGE-M: Radio Observatory on Antarctic High Mountain for Detecting Near-Horizon Ultra-High Energy Air Showers",
+            "authors": "Leshan Zhao,  P Chen , et al.",
+            "year": 2022,
+            "venue": "37th International Cosmic Ray Conference",
+            "link": "https://ui.adsabs.harvard.edu/abs/2022icrc.confE1173W/abstract"
+        },
+        {
+            "title": "Triboelectric backgrounds to radio-based UHE neutrino exeperiments",
+            "authors": "Leshan Zhao,  A Anker , et al.",
+            "year": 2021,
+            "venue": "arXiv preprint arXiv:2103.06079",
+            "link": "https://arxiv.org/abs/2103.06079"
+        },
+        {
+            "title": "Developing new analysis tools for near surface radio-based neutrino detectors",
+            "authors": "Leshan Zhao,  P Baldi , et al.",
+            "year": 2023,
+            "venue": "Journal of Cosmology and Astroparticle Physics",
+            "link": "https://iopscience.iop.org/article/10.1088/1475-7516/2023/10/060/meta"
+        }
+    ],
+    "conference_papers": [
+        {
+            "title": "Development of an in-situ calibration device of firn properties for Askaryan neutrino detectors",
+            "authors": "Leshan Zhao,  Christian Glaser",
+            "year": 2022,
+            "venue": "37th International Cosmic Ray Conference (ICRC), July 12-23, 2021, Online",
+            "link": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1820952"
+        }
+    ]
+}
