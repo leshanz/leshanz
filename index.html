@@ -45,3 +45,84 @@
             border-bottom: 2px solid #4CAF50;
             display: inline-block;
         }
+        .projects, .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .card {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Your professional tagline (e.g., Developer | Researcher | Designer)</p>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Brief introduction about yourself, your background, and professional interests. 
+                Share your current role or any unique achievements.
+            </p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>Brief description of the project. Include technologies used or outcomes.</p>
+                    <a href="https://github.com/your-username/project1" target="_blank">View on GitHub</a>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Brief description of the project. Include technologies used or outcomes.</p>
+                    <a href="https://github.com/your-username/project2" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="card">
+                    <h3>Skill 1</h3>
+                    <p>Description of the skill or tools you are proficient in.</p>
+                </div>
+                <div class="card">
+                    <h3>Skill 2</h3>
+                    <p>Description of the skill or tools you are proficient in.</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Reach out via email: <a href="mailto:your.email@example.com">your.email@example.com</a>
+            </p>
+            <p>
+                Connect on LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn Profile</a>
+            </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
